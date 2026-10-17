@@ -1,0 +1,76 @@
+{
+  "underlying": {
+    "rows": 4645,
+    "date_min": "2008-01-01",
+    "date_max": "2026-10-05",
+    "duplicate_dates": 0,
+    "missing_by_column": {
+      "valuation_date": 0,
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 0,
+      "shares_traded": 0,
+      "turnover_cr": 0,
+      "log_return": 1,
+      "realized_vol_20d": 20,
+      "realized_vol_60d": 60,
+      "realized_vol_252d": 252,
+      "ohlc_valid": 0
+    },
+    "ohlc_invalid_complete_rows": 0
+  },
+  "rbi": {
+    "rows": 78,
+    "month_min": "2020-01",
+    "month_max": "2026-06",
+    "source_units": [
+      "Indian rupee"
+    ],
+    "source_value_min": 2.87101,
+    "source_value_max": 6.994458,
+    "rate_status": "verified_percentage_yield",
+    "decimal_scale": 0.01,
+    "policy_approved": true
+  },
+  "options": {
+    "CE": {
+      "rows": 995104,
+      "missing": {
+        "close": 0,
+        "turnover_lakhs": 576031,
+        "premium_turnover_lakhs": 577106,
+        "open_interest": 476023
+      },
+      "states": {
+        "active": 974310,
+        "maturity_day": 20794
+      },
+      "price_quality": {
+        "close_only": 576031,
+        "complete_ohlc": 419073
+      }
+    },
+    "PE": {
+      "rows": 1062839,
+      "missing": {
+        "close": 0,
+        "turnover_lakhs": 599407,
+        "premium_turnover_lakhs": 601229,
+        "open_interest": 463923
+      },
+      "states": {
+        "active": 1040684,
+        "maturity_day": 22155
+      },
+      "price_quality": {
+        "close_only": 599407,
+        "complete_ohlc": 463432
+      }
+    }
+  },
+  "design": {
+    "design": "market_snapshot outputs retain all rows; pricing eligibility requires a supported prior-month rate and realized-volatility window",
+    "rate_alignment": "prior calendar month"
+  }
+}

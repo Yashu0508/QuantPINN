@@ -1,0 +1,16 @@
+{
+  "checkpoint": "models/market_parametric_pinn_kaggle.pt",
+  "training_run": "juhilmodi/nse-pinn-market-training v2",
+  "architecture": {
+    "hidden": 128,
+    "depth": 5,
+    "input": ["spot_over_strike", "tau_over_maturity", "sigma_normalized", "rate_normalized", "maturity_normalized", "option_code"],
+    "output": "option_value_over_strike",
+    "s_max_multiple": 4.0,
+    "sigma_scale": 1.0,
+    "rate_scale": 0.1,
+    "maturity_scale": 5.0
+  },
+  "training_device": "cuda",
+  "market_close_in_training_loss": false
+}

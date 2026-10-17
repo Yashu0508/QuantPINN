@@ -1,0 +1,11 @@
+{
+  "approved": true,
+  "source_unit": "Indian rupee",
+  "interpretation": "annualized_percentage_yield",
+  "decimal_scale": 0.01,
+  "as_of_alignment": "prior_calendar_month",
+  "day_count": 365,
+  "source_url": "https://rbi.org.in/",
+  "source_reference": "RBI official current-rates publication lists 91-day Treasury-bill yields with percent signs; the local export's unit field is inconsistent metadata.",
+  "notes": "Source values are treated as annualized percentage yields and converted to decimals. Retain the source value and unit for auditability."
+}

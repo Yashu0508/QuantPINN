@@ -1,0 +1,40 @@
+{
+  "checkpoint": "models/market_parametric_pinn_kaggle.pt",
+  "training_source": "Kaggle GPU run v2",
+  "audit_start": "2026-05-18",
+  "audit_end": "2026-07-31",
+  "policy": {
+    "protocol_version": 2,
+    "reference": "Black-Scholes using each snapshot's calibrated S, K, T, sigma, and r",
+    "prediction_scale": "V_over_K",
+    "audit_slice": "last chronological quarter of the previously examined Kaggle holdout; descriptive only",
+    "independent_of_model_selection": false,
+    "thresholds": {
+      "normalized_mae_max": 0.02,
+      "normalized_rmse_max": 0.04,
+      "normalized_max_abs_max": 0.2,
+      "minimum_price": 0.0
+    },
+    "market_close_role": "diagnostic only; never an acceptance target or PDE training label",
+    "production_status_on_pass": "candidate_only"
+  },
+  "all_holdout": {
+    "rows": 331545,
+    "normalized_mae": 0.007529301829060292,
+    "normalized_rmse": 0.016016229939403385,
+    "normalized_max_abs": 0.10238673468869869,
+    "minimum_price": 0.0
+  },
+  "audit_slice": {
+    "rows": 71149,
+    "normalized_mae": 0.005460233132706794,
+    "normalized_rmse": 0.012542024605741598,
+    "normalized_max_abs": 0.07742842791428822,
+    "minimum_price": 0.0
+  },
+  "market_close_diagnostic_mae": 322.0775247333278,
+  "descriptive_thresholds_met": true,
+  "passed": false,
+  "status": "candidate_only",
+  "reason": "This quarter is part of the holdout already used to compare v2 and v3; new thresholds cannot make it independent."
+}

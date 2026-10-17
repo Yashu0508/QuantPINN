@@ -1,0 +1,13 @@
+{
+  "id": "juhilmodi/nse-pinn-market-training",
+  "title": "NSE PINN Market Training",
+  "code_file": "train_kaggle.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": ["juhilmodi/nse-pinn-calibrated-data"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

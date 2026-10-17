@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "purpose": "Numerical solver validation, separate from chronological market generalization",
+  "benchmark_seed": 921730,
+  "scenario_count": 2048,
+  "spot_over_strike": [0.6, 1.5],
+  "time_remaining_years": [0.01, 5.0],
+  "volatility": [0.055, 0.9],
+  "rate": [0.03, 0.07],
+  "thresholds": {
+    "price_over_strike_mae": 0.001,
+    "price_over_strike_max_error": 0.01,
+    "delta_mae": 0.02,
+    "strike_scaled_gamma_mae": 0.1,
+    "equivalent_horizon_price_over_strike_max_error": 0.001
+  },
+  "rationale": "A pricing-PDE solver must approximate the analytical solution and its derivatives under identical assumptions. Elementary price clipping is not evidence of solving the PDE. Evaluate raw outputs as well as projected outputs. Thresholds apply to future checkpoints and will not be relaxed to fit results.",
+  "market_scope_note": "No synthetic benchmark can establish future NSE market-price accuracy. Previously inspected market holdout remains development data."
+}

@@ -1,0 +1,18 @@
+# Private source data and generated binary artifacts
+*.csv
+*.parquet
+*.pt
+*.pth
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+kaggle_output*/
+_edit*.py
+write_probe.txt

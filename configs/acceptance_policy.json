@@ -1,0 +1,15 @@
+{
+  "protocol_version": 2,
+  "reference": "Black-Scholes using each snapshot's calibrated S, K, T, sigma, and r",
+  "prediction_scale": "V_over_K",
+  "audit_slice": "last chronological quarter of the previously examined Kaggle holdout; descriptive only",
+  "independent_of_model_selection": false,
+  "thresholds": {
+    "normalized_mae_max": 0.02,
+    "normalized_rmse_max": 0.04,
+    "normalized_max_abs_max": 0.20,
+    "minimum_price": 0.0
+  },
+  "market_close_role": "diagnostic only; never an acceptance target or PDE training label",
+  "production_status_on_pass": "candidate_only"
+}

@@ -1,0 +1,196 @@
+{
+  "status": "failed",
+  "protocol": {
+    "schema_version": 1,
+    "purpose": "Numerical solver validation, separate from chronological market generalization",
+    "benchmark_seed": 921730,
+    "scenario_count": 2048,
+    "spot_over_strike": [
+      0.6,
+      1.5
+    ],
+    "time_remaining_years": [
+      0.01,
+      5.0
+    ],
+    "volatility": [
+      0.055,
+      0.9
+    ],
+    "rate": [
+      0.03,
+      0.07
+    ],
+    "thresholds": {
+      "price_over_strike_mae": 0.001,
+      "price_over_strike_max_error": 0.01,
+      "delta_mae": 0.02,
+      "strike_scaled_gamma_mae": 0.1,
+      "equivalent_horizon_price_over_strike_max_error": 0.001
+    },
+    "rationale": "A pricing-PDE solver must approximate the analytical solution and its derivatives under identical assumptions. Elementary price clipping is not evidence of solving the PDE. Evaluate raw outputs as well as projected outputs. Thresholds apply to future checkpoints and will not be relaxed to fit results.",
+    "market_scope_note": "No synthetic benchmark can establish future NSE market-price accuracy. Previously inspected market holdout remains development data."
+  },
+  "checkpoint_metadata": {
+    "device": "cuda",
+    "train_rows": 1572790,
+    "test_rows": 331545,
+    "train_cutoff": "2025-09-23",
+    "steps": 12000,
+    "pde_training_excludes_close": true,
+    "pinn_vs_black_scholes": {
+      "n": 331545,
+      "mae": 189.48420157440924,
+      "rmse": 425.1103249110648,
+      "max_abs_error": 3391.4684289359448
+    },
+    "black_scholes_vs_market_close": {
+      "n": 331545,
+      "mae": 306.2469297743311,
+      "rmse": 709.3353386850633,
+      "max_abs_error": 6041.0307518651725
+    },
+    "pinn_vs_market_close": {
+      "n": 331545,
+      "mae": 303.73269768918897,
+      "rmse": 660.8954323852118,
+      "max_abs_error": 5941.4221213327855
+    },
+    "history": [
+      {
+        "step": 1,
+        "loss": 3016.177001953125,
+        "pde_loss": 3016.1767578125,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00015020984574221075
+      },
+      {
+        "step": 1000,
+        "loss": 0.6743925213813782,
+        "pde_loss": 0.6742477416992188,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00014479513629339635
+      },
+      {
+        "step": 2000,
+        "loss": 0.27640897035598755,
+        "pde_loss": 0.2762373089790344,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.0001716621918603778
+      },
+      {
+        "step": 3000,
+        "loss": 0.3045000731945038,
+        "pde_loss": 0.3043616712093353,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00013841388863511384
+      },
+      {
+        "step": 4000,
+        "loss": 1.0378941297531128,
+        "pde_loss": 1.0377436876296997,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00015044378233142197
+      },
+      {
+        "step": 5000,
+        "loss": 0.15075135231018066,
+        "pde_loss": 0.1505732387304306,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00017811160068958998
+      },
+      {
+        "step": 6000,
+        "loss": 0.12289170175790787,
+        "pde_loss": 0.12273737043142319,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00015433132648468018
+      },
+      {
+        "step": 7000,
+        "loss": 0.03912467882037163,
+        "pde_loss": 0.0389685332775116,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00015614734729751945
+      },
+      {
+        "step": 8000,
+        "loss": 0.07153524458408356,
+        "pde_loss": 0.07137580215930939,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00015943970356602222
+      },
+      {
+        "step": 9000,
+        "loss": 0.07521022856235504,
+        "pde_loss": 0.07502654194831848,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.000183687821845524
+      },
+      {
+        "step": 10000,
+        "loss": 0.10486719757318497,
+        "pde_loss": 0.10470736026763916,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00015983740740921348
+      },
+      {
+        "step": 11000,
+        "loss": 0.03449184447526932,
+        "pde_loss": 0.03433169797062874,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00016014676657505333
+      },
+      {
+        "step": 12000,
+        "loss": 0.01595577783882618,
+        "pde_loss": 0.015791740268468857,
+        "terminal_loss": 0.0,
+        "boundary_loss": 0.00016403821064159274
+      }
+    ]
+  },
+  "checkpoint_sha256": "de5165ea76e7a376fc189746c371495b7a0139b269f78811251c9a6e52285cb1",
+  "scenario_summary": {
+    "count": 2048,
+    "option_counts": {
+      "CE": 1033,
+      "PE": 1015
+    },
+    "spot_over_strike": [
+      0.6000614025373472,
+      1.499558654103239
+    ],
+    "tau_years": [
+      0.013838055825245747,
+      4.999986692489564
+    ],
+    "maturity_years": [
+      0.12510448841717145,
+      4.9999884061062865
+    ]
+  },
+  "raw_model_metrics": {
+    "price_over_strike": {
+      "mae": 0.12888014777075069,
+      "max_abs_error": 0.417972905480297,
+      "min_raw_price": -0.026924852281808853
+    },
+    "greeks": {
+      "delta_mae": 0.1317828754729024,
+      "strike_scaled_gamma_mae": 0.4904005382605986
+    },
+    "equivalent_horizon": {
+      "max_abs_error": 0.4172341655129508,
+      "mae": 0.13371992467605306
+    }
+  },
+  "checks": {
+    "price_over_strike_mae": false,
+    "price_over_strike_max_error": false,
+    "delta_mae": false,
+    "strike_scaled_gamma_mae": false,
+    "equivalent_horizon_price_over_strike_max_error": false
+  },
+  "interpretation": "The checkpoint does not satisfy the independent analytical solver gate; thresholds were not relaxed."
+}

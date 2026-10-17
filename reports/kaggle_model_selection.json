@@ -1,0 +1,29 @@
+{
+  "selected": "kaggle_output_v2",
+  "selection_reason": "v2 has substantially lower holdout error than v3; v3 maturity-balanced sampler was rejected. The normalized tolerance is provisional and must not be presented as a completed acceptance gate.",
+  "v2": {
+    "folder": "kaggle_output_v2",
+    "rows": 331545,
+    "normalized_mae": 0.007529301829060292,
+    "normalized_rmse": 0.016016229939403385,
+    "normalized_max_abs": 0.10238673468869869,
+    "market_mae": 303.73269768918897,
+    "nonnegative": true
+  },
+  "v3": {
+    "folder": "kaggle_output_v3",
+    "rows": 331545,
+    "normalized_mae": 0.013278194065639768,
+    "normalized_rmse": 0.027539561230678366,
+    "normalized_max_abs": 0.16625164092084224,
+    "market_mae": 398.68895208780924,
+    "nonnegative": true
+  },
+  "gate": {
+    "normalized_mae_max": 0.01,
+    "normalized_rmse_max": 0.02,
+    "normalized_max_abs_max": 0.12
+  },
+  "selected_gate_passed": false,
+  "status": "candidate_only"
+}

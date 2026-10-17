@@ -1,0 +1,7 @@
+{
+  "dataset": "nse-pinn-calibrated-data",
+  "source_rows": {"CE": 995104, "PE": 1062839},
+  "training_rule": "PDE, payoff, and boundary conditions only; market Close is evaluation-only",
+  "rate_policy": "annualized percentage yield converted by 0.01; prior calendar month as-of",
+  "files": ["market_snapshot_ce.parquet", "market_snapshot_pe.parquet", "underlying_daily.parquet", "risk_free_monthly.parquet"]
+}

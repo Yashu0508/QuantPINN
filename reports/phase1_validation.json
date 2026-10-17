@@ -1,0 +1,63 @@
+{
+  "underlying": {
+    "rows": 4645,
+    "duplicate_dates": 0,
+    "missing_close": 0,
+    "ohlc_invalid": 0
+  },
+  "CE": {
+    "row_count": 995104,
+    "option_type_only_expected": true,
+    "duplicate_contract_keys": 0,
+    "missing_close": 0,
+    "nonpositive_close": 0,
+    "nonpositive_strike": 0,
+    "missing_spot": 0,
+    "missing_underlying_value": 0,
+    "date_after_expiry_state_errors": 0,
+    "moneyness_errors": 0,
+    "nifty_close_join_missing": 0,
+    "underlying_nifty_mismatch_over_0_01": 0,
+    "date_min": "2020-01-01",
+    "date_max": "2026-10-05",
+    "expiry_min": "2020-01-02",
+    "expiry_max": "2031-06-24",
+    "passed": true
+  },
+  "PE": {
+    "row_count": 1062839,
+    "option_type_only_expected": true,
+    "duplicate_contract_keys": 0,
+    "missing_close": 0,
+    "nonpositive_close": 0,
+    "nonpositive_strike": 0,
+    "missing_spot": 0,
+    "missing_underlying_value": 0,
+    "date_after_expiry_state_errors": 0,
+    "moneyness_errors": 0,
+    "nifty_close_join_missing": 0,
+    "underlying_nifty_mismatch_over_0_01": 0,
+    "date_min": "2020-01-01",
+    "date_max": "2026-10-05",
+    "expiry_min": "2020-01-02",
+    "expiry_max": "2031-06-24",
+    "passed": true
+  },
+  "rbi": {
+    "rows": 78,
+    "rate_unit_verified": true,
+    "rate_policy": {
+      "approved": true,
+      "source_unit": "Indian rupee",
+      "interpretation": "annualized_percentage_yield",
+      "decimal_scale": 0.01,
+      "as_of_alignment": "prior_calendar_month",
+      "day_count": 365,
+      "source_url": "https://rbi.org.in/",
+      "source_reference": "RBI official current-rates publication lists 91-day Treasury-bill yields with percent signs; the local export's unit field is inconsistent metadata.",
+      "notes": "Source values are treated as annualized percentage yields and converted to decimals. Retain the source value and unit for auditability."
+    }
+  },
+  "data_quality_gate_passed": true,
+  "pricing_calibration_gate_passed": true
+}

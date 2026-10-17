@@ -1,0 +1,23 @@
+{
+  "contract": {
+    "option_type": "CE",
+    "expiry": "2024-12-26",
+    "strike": 18000.0
+  },
+  "rows": 520,
+  "date_min": "2021-02-17",
+  "date_max": "2024-12-26",
+  "pinn_delta_vs_bs_mae": 0.06846499335493877,
+  "pinn_hedge": {
+    "final_error": -2222.1603474277454,
+    "mean_abs_error": 1923.9767195373825,
+    "error_std": 683.4686776005168
+  },
+  "bs_hedge": {
+    "final_error": -1592.6886525834998,
+    "mean_abs_error": 1444.0456285402265,
+    "error_std": 544.8225260148362
+  },
+  "completed_to_expiry": true,
+  "limitations": "Index units are idealized tradable shares; excludes costs, futures basis, and dividends."
+}

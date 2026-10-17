@@ -1,0 +1,44 @@
+{
+  "CE": {
+    "option_type": "CE",
+    "rows": 1000,
+    "raw": {
+      "mae": 1.080718805583309,
+      "rmse": 1.92505400272069,
+      "max_abs_error": 9.40379696502313,
+      "mean_absolute_relative_error": 2623534621.141749,
+      "n": 1000.0
+    },
+    "projected": {
+      "mae": 1.0338292803278921,
+      "rmse": 1.9159644855710696,
+      "max_abs_error": 9.40379696502313,
+      "mean_absolute_relative_error": 118552871.52258533,
+      "n": 1000.0
+    },
+    "raw_min": -1.0079846169034177,
+    "projected_min": 0.0
+  },
+  "PE": {
+    "option_type": "PE",
+    "rows": 1000,
+    "raw": {
+      "mae": 1.1049138676801704,
+      "rmse": 1.9106387965195852,
+      "max_abs_error": 9.865720500613323,
+      "mean_absolute_relative_error": 1812720021.6098838,
+      "n": 1000.0
+    },
+    "projected": {
+      "mae": 1.0417377440669247,
+      "rmse": 1.8992498166612357,
+      "max_abs_error": 9.865720500613323,
+      "mean_absolute_relative_error": 348296291.74638546,
+      "n": 1000.0
+    },
+    "raw_min": -1.256312261827231,
+    "projected_min": 0.0
+  },
+  "exit_criterion_passed": false,
+  "reason": "Parameterized PINN is implemented and evaluated on synthetic scenarios; market calibration is a separate gate."
+}

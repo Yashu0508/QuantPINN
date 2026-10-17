@@ -1,0 +1,37 @@
+{
+  "CE": {
+    "option_type": "CE",
+    "checkpoint": "models\\fixed_parameter_ce_baseline.pt",
+    "grid_points": 1004,
+    "raw_mae": 0.1173362831412644,
+    "raw_rmse": 0.18261347340621195,
+    "raw_min_pinn_price": -0.15699386596679688,
+    "mae": 0.1135868163096454,
+    "rmse": 0.1814147922959049,
+    "max_abs_error": 1.2454840376237115,
+    "min_pinn_price": 0.0,
+    "pinn_at_spot_100": 4.226946830749512,
+    "black_scholes_at_spot_100": 4.614997129602855
+  },
+  "PE": {
+    "option_type": "PE",
+    "checkpoint": "models\\fixed_parameter_pe_baseline.pt",
+    "grid_points": 1004,
+    "raw_mae": 0.15018604464198354,
+    "raw_rmse": 0.2340728939912066,
+    "raw_min_pinn_price": -0.39398372173309326,
+    "mae": 0.05091518973848944,
+    "rmse": 0.16933679853844277,
+    "max_abs_error": 1.4089442691134764,
+    "min_pinn_price": 0.0,
+    "pinn_at_spot_100": 2.6997745037078857,
+    "black_scholes_at_spot_100": 3.372777178991008
+  },
+  "tolerance": {
+    "mae": 0.25,
+    "rmse": 0.5,
+    "max_abs_error": 1.5
+  },
+  "exit_criterion_passed": true,
+  "reason": "Both fixed-parameter checkpoints meet the stated analytical grid tolerance after the explicit no-arbitrage inference projection."
+}

@@ -1,0 +1,9 @@
+{
+  "paired_eligible_rows": 922290,
+  "residual_mean": 13.72293403702096,
+  "residual_median": 1.595182468608101,
+  "residual_mae": 665.586710992665,
+  "residual_rmse": 1258.5700691714444,
+  "residual_p95_abs": 3245.7549288599735,
+  "interpretation": "Diagnostic only; large residuals may reflect carry/dividends, stale or illiquid quotes, and contract conventions."
+}

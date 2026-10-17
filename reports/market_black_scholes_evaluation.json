@@ -1,0 +1,70 @@
+{
+  "CE": {
+    "option_type": "CE",
+    "eligible_rows": 936552,
+    "date_min": "2020-02-01",
+    "date_max": "2026-06-30",
+    "metrics_all": {
+      "mae": 385.8974403339958,
+      "rmse": 739.4065070669548,
+      "max_abs_error": 8838.972512117527,
+      "mean_absolute_relative_error": 0.5040900361055438,
+      "n": 936552.0
+    },
+    "metrics_by_price_quality": {
+      "close_only": {
+        "mae": 625.4789173445488,
+        "rmse": 968.207042553472,
+        "max_abs_error": 8838.972512117527,
+        "mean_absolute_relative_error": 0.4575052643968184,
+        "n": 539993.0
+      },
+      "complete_ohlc": {
+        "mae": 59.660183039722625,
+        "rmse": 121.25683874923597,
+        "max_abs_error": 2779.291375749288,
+        "mean_absolute_relative_error": 0.5675243564193176,
+        "n": 396559.0
+      }
+    },
+    "monte_carlo_sample": {
+      "rows": 128,
+      "mae_vs_market_close": 386.7742575093472,
+      "mean_standard_error": 10.297290655388792
+    }
+  },
+  "PE": {
+    "option_type": "PE",
+    "eligible_rows": 967783,
+    "date_min": "2020-02-01",
+    "date_max": "2026-07-31",
+    "metrics_all": {
+      "mae": 457.4079447486074,
+      "rmse": 1037.1845420665368,
+      "max_abs_error": 7958.930065125988,
+      "mean_absolute_relative_error": 5.438457382013097,
+      "n": 967783.0
+    },
+    "metrics_by_price_quality": {
+      "close_only": {
+        "mae": 758.8634743555283,
+        "rmse": 1370.8889834777144,
+        "max_abs_error": 7958.930065125988,
+        "mean_absolute_relative_error": 9.216248519165909,
+        "n": 546322.0
+      },
+      "complete_ohlc": {
+        "mae": 66.64394085284452,
+        "rmse": 184.6588115199957,
+        "max_abs_error": 5041.956910920927,
+        "mean_absolute_relative_error": 0.5414671275610934,
+        "n": 421461.0
+      }
+    },
+    "monte_carlo_sample": {
+      "rows": 128,
+      "mae_vs_market_close": 369.13424326620066,
+      "mean_standard_error": 4.111509215325944
+    }
+  }
+}

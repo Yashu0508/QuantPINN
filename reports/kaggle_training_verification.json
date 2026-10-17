@@ -1,0 +1,47 @@
+{
+  "source": "Kaggle GPU run v2",
+  "device": "cuda",
+  "steps": 12000,
+  "train_rows": 1572790,
+  "test_rows": 331545,
+  "train_cutoff": "2025-09-23",
+  "test_min_date": "2025-09-24",
+  "test_max_date": "2026-07-31",
+  "pde_training_excludes_close": true,
+  "pinn_vs_bs_absolute": {
+    "n": 331545,
+    "mae": 189.48420157440924,
+    "rmse": 425.1103249110648,
+    "max_abs_error": 3391.4684289359448
+  },
+  "pinn_vs_bs_normalized": {
+    "mae": 0.007529301829060292,
+    "rmse": 0.016016229939403385,
+    "max_abs": 0.10238673468869869,
+    "p50": 0.002069115890265043,
+    "p90": 0.023128156180617088
+  },
+  "pinn_vs_market": {
+    "n": 331545,
+    "mae": 303.73269768918897,
+    "rmse": 660.8954323852118,
+    "max_abs_error": 5941.4221213327855
+  },
+  "bs_vs_market": {
+    "n": 331545,
+    "mae": 306.2469297743311,
+    "rmse": 709.3353386850633,
+    "max_abs_error": 6041.0307518651725
+  },
+  "nonnegative_predictions": true,
+  "normalized_gate": {
+    "mae_max": 0.01,
+    "rmse_max": 0.02,
+    "max_abs_max": 0.12
+  },
+  "normalized_gate_passed": false,
+  "selected_run": "kaggle_output_v2",
+  "rejected_run": "kaggle_output_v3",
+  "status": "candidate_only",
+  "reason": "Metrics are reported in normalized V/K units, but the tolerance was chosen after observing the holdout and is not an independent acceptance gate."
+}
