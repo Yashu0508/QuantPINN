@@ -116,21 +116,26 @@ These values show that the current checkpoint is not an accepted analytical PDE 
 ## Repository structure
 
 ```text
-configs/                         Validation and rate policies
-src/quant/                       Black–Scholes, Monte Carlo, implied volatility
-src/pinn/                        PINN models, training, inference, checkpoint loading
-src/calibration/                 Rate-policy handling
-src/validation/                  Metrics, parity, and solver gates
-src/hedging/                     Historical daily delta hedging
-src/api/                         FastAPI research interface
-tests/                           Automated tests
-kaggle/nse-pinn-market-training/ Kaggle GPU training script and metadata
-reports/                         Evaluation and validation outputs
-models/                          Artifact guidance; binaries are not distributed
-preprocess_datasets.py           Build canonical datasets
-validate_data.py                 Run data-quality gates
-train_*.py                       Local PINN training entry points
-evaluate_*.py                    Evaluation entry points
+QuantPINN/
+├── configs/                     # Validation and rate policies
+├── src/
+│   ├── quant/                    # Black–Scholes, Monte Carlo, implied volatility
+│   ├── pinn/                     # PINN models, training, inference, checkpoints
+│   ├── calibration/              # Rate-policy handling
+│   ├── validation/               # Metrics, parity, and solver gates
+│   ├── hedging/                  # Historical daily delta hedging
+│   └── api/                      # FastAPI research interface
+├── tests/                        # Automated tests
+├── kaggle/
+│   └── nse-pinn-market-training/ # Kaggle GPU training script and metadata
+├── reports/                      # Evaluation and validation outputs
+├── models/                       # Artifact guidance; binaries are not distributed
+├── preprocess_datasets.py        # Build canonical datasets
+├── validate_data.py              # Run data-quality gates
+├── train_*.py                    # Local PINN training entry points
+├── evaluate_*.py                 # Evaluation entry points
+├── requirements.txt              # Python dependency ranges
+└── README.md                     # Project documentation
 ```
 
 ## Installation and local workflows
