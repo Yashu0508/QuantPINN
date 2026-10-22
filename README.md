@@ -40,16 +40,16 @@ Observed option `Close` values are deliberately kept out of the PDE, payoff, and
 
 ## Mathematical formulation
 
-The normalized model uses \(x=S/K\), \(y=\\tau/T\), and \(u=V/K\), where \(S\) is spot, \(K\) strike, \(\\tau\) time remaining, \(T\) maturity, \(r\) the annualized decimal rate, and \(\\sigma\) volatility. In the implementation, time is represented in time-to-maturity coordinates and the normalized Black–Scholes residual is:
+The normalized model uses \(x=S/K\), \(y=\tau/T\), and \(u=V/K\), where \(S\) is spot, \(K\) strike, \(\tau\) time remaining, \(T\) maturity, \(r\) the annualized decimal rate, and \(\sigma\) volatility. In the implementation, time is represented in time-to-maturity coordinates and the normalized Black–Scholes residual is:
 
 $$
-\\frac{u_y}{T} - \\frac{1}{2}\\sigma^2x^2u_{xx} - rxu_x + ru = 0.
+\frac{u_y}{T} - \frac{1}{2}\sigma^2x^2u_{xx} - rxu_x + ru = 0.
 $$
 
 The network is constrained at \(y=0\) by the European payoff:
 
 $$
-u(x,0)=\\begin{cases}\\max(x-1,0)&\\text{CE}\\\\\\max(1-x,0)&\\text{PE}\\end{cases}
+u(x,0)=\begin{cases}\max(x-1,0)&\text{CE}\\\\\max(1-x,0)&\text{PE}\\end{cases}
 $$
 
 Training minimizes the PDE residual together with weighted terminal-payoff and boundary losses; the fixed-parameter trainer also includes a positivity penalty. The parameterized models receive normalized spot, time, volatility, rate, maturity, and an option code. See [`src/pinn/fixed_parameter.py`](src/pinn/fixed_parameter.py) and [`src/pinn/parametric.py`](src/pinn/parametric.py) for the authoritative formulation.
